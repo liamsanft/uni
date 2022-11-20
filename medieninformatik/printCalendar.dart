@@ -87,10 +87,26 @@ void printCalendar(int month, int day) {
       printCalendarLine(sublist);
     }
   } else {
-    print('Der eingegebene Monat oder Monatsanfang ist ungültig!');
+    throw Exception('Der eingegebene Monat oder Monatsanfang ist ungültig!');
   }
 }
 
 void main() {
+  // test
+
+  // normal use case
+  // for (int i = 1; i <= 12; i++) {
+  //   for (int j = 1; j <= 7; j++) {
+  //     printCalendar(i, j);
+  //   }
+  // }
+
+  // edge cases
+
+  // printCalendar(0, 1);
+  // printCalendar(13, 1);
+  // printCalendar(1, 0);
+  // printCalendar(1, 8);
+
   printCalendar(8, 3);
 }
